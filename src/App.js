@@ -11,7 +11,7 @@ function App() {
   let calc=(e)=>{
     e.preventDefault()
 
-    if(weight === 0 || height === 0){
+    if(weight <= 0 || height <= 0){
       alert("Please Enter Your Details")
     }else{
       let bmi=(weight/(height * height)*703)
@@ -59,9 +59,9 @@ function App() {
             <div>
               <label>Height (in)</label>
               <input type="text" value={height} onChange={(e)=>setHeight(e.target.value)} />
-            </div>
+            </div><br></br>
             <div>
-              <button className="btn" type="submit">Submit</button>
+              <button className="btn" type="submit">Submit</button><br></br>
               <button className="btn-outline" type="submit" onClick={reload}>Reload</button>
             </div>
           </form>
